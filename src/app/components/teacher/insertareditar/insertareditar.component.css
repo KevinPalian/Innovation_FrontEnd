@@ -1,0 +1,125 @@
+/* General */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f6f7;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* Título */
+h1 {
+  font-size: 2.5rem;
+  color: #24292f; /* Color de texto de GitHub */
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+/* Form Container */
+div {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease-in-out;
+}
+
+div:hover {
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Fields */
+mat-form-field {
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+mat-form-field .mat-label {
+  font-size: 1.1rem;
+  color: #24292f; /* GitHub dark text */
+}
+
+mat-form-field input,
+mat-form-field textarea,
+mat-form-field mat-select {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  border: 1px solid #d1d5da;
+  padding: 12px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+mat-form-field input:focus,
+mat-form-field textarea:focus,
+mat-form-field mat-select:focus {
+  border-color: #0366d6; /* Blue similar to GitHub */
+}
+
+mat-form-field .mat-error {
+  color: #d32f2f;
+  font-size: 0.9rem;
+}
+
+/* Select dropdown */
+mat-select {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  border: 1px solid #d1d5da;
+}
+
+/* Slider */
+.example-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+mat-slider {
+  width: 80%;
+}
+
+.slider-value {
+  font-size: 1.25rem;
+  color: #0366d6; /* Blue similar to GitHub */
+  font-weight: bold;
+}
+
+/* Button */
+button {
+  background-color: #28a745; /* Green like GitHub's button */
+  color: #fff;
+  padding: 14px 30px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+button:hover {
+  background-color: #218838; /* Darker green on hover */
+  transform: translateY(-2px); /* Slight "lift" effect */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  div {
+    padding: 20px;
+  }
+
+  mat-form-field {
+    margin-bottom: 15px;
+  }
+
+  button {
+    padding: 12px;
+  }
+}

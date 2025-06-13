@@ -1,0 +1,71 @@
+/* Table Container */
+div {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #0366d6; /* Blue similar to GitHub */
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+  padding: 16px;
+  text-align: left;
+  font-size: 1rem;
+  border-bottom: 1px solid #000000;
+}
+
+th {
+  background-color: #0366d6; /* Blue */
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+  border-radius: 12px 12px 0 0;
+}
+
+td {
+  background-color: #fafafa; /* Light gray */
+  color: #333;
+}
+
+mat-header-row, mat-row {
+  transition: background-color 0.3s ease;
+}
+
+mat-header-row:hover, mat-row:hover {
+  background-color: #f1f1f1; /* Light gray hover */
+}
+
+/* Hover Effects */
+tr:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+/* Responsive design for table */
+@media (max-width: 768px) {
+  table {
+    font-size: 0.9rem;
+  }
+
+  th, td {
+    padding: 12px;
+  }
+
+  th {
+    font-size: 1.2rem;
+  }
+}

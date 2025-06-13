@@ -1,0 +1,62 @@
+<div>
+  <div><h1>Registro de Profesores</h1></div>
+  <div>
+    <form [formGroup]="form" (submit)="aceptar()">
+      <mat-form-field class="example-full-width">
+        <mat-label>Especialidad</mat-label>
+        <input
+          matInput
+          placeholder="Ex. Pizza"
+          formControlName="especialidad"
+        />
+        <mat-error *ngIf="form.get('especialidad')?.hasError('required')">
+          Colocar Especialidad
+        </mat-error>
+      </mat-form-field>
+      <br />
+      <mat-form-field>
+        <mat-label>Años de Experiencia</mat-label>
+        <mat-select formControlName="experiencia">
+          @for (food of tipos; track food) {
+          <mat-option [value]="food.value">{{ food.viewValue }}</mat-option>
+          }
+        </mat-select>
+        <mat-error *ngIf="form.get('experiencia')?.hasError('required')">
+          Tipo Obligatorio
+        </mat-error>
+      </mat-form-field>
+      <br />
+      <mat-form-field class="example-full-width">
+        <mat-label>Descripción</mat-label>
+        <textarea
+          matInput
+          placeholder="Ex. It makes me feel..."
+          formControlName="descripcion"
+        ></textarea>
+        <mat-error *ngIf="form.get('descripcion')?.hasError('required')">
+          Colocar Comentario
+        </mat-error>
+      </mat-form-field>
+
+      <section class="example-section">
+        <label class="example-margin">Nota Promedio:</label>
+        <mat-slider
+            [min]="0"
+            [max]="20"
+            [step]="0.1"
+            class="example-margin">
+          <input
+            type="range"
+            [(ngModel)]="value"
+            formControlName="notapromedio"
+            matSliderThumb
+          />
+        </mat-slider>
+        <span class="slider-value">{{ value }}</span>
+      </section>
+      <br/>
+
+      <button matButton="outlined">Registrar</button>
+    </form>
+  </div>
+</div>
